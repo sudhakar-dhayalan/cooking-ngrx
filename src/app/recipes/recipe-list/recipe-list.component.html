@@ -8,6 +8,9 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <app-recipe-item *ngFor="let recip of recipes" [recipe]="recip"></app-recipe-item>
+        <app-recipe-item 
+        *ngFor="let recip of recipes" 
+        [recipe]="recip"
+        (recipeItem)="emittedRecipeItem(recip)"></app-recipe-item>
     </div>
 </div>
