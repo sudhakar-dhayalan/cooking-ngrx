@@ -6,6 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
     collapsed = true;
+    expandDropdown = false;
 
     @Output("displayComponent") showComponent = new EventEmitter();
 
@@ -20,5 +21,9 @@ export class HeaderComponent implements OnInit {
 
     showShoppingList() {
         this.showComponent.emit("ShopingList");
+    }
+
+    toggle() {
+        this.expandDropdown = !this.expandDropdown;
     }
 }
