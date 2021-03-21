@@ -14,19 +14,21 @@
 
 
     <div class="row">
-        <div class="col-xs-12">
-            <div class="dropdown">
 
-                <button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="col-xs-12">
+            <div class="btn-group" appDropdown>
+
+                <button type="button" class="btn btn-primary dropdown-toggle">
                     Manage Recipe <span class="caret"></span>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <ul class="dropdown-menu">
                     <li><a (click)="addToShoppingList()" style="cursor: pointer;">To Shopping list</a></li>
-                    <li><a style="cursor: pointer;">Edit Recipe</a></li>
+                    <li><a style="cursor: pointer;" (click)="showEditRecipe()">Edit Recipe</a></li>
                     <li><a style="cursor: pointer;">Delete Recipe</a></li>
-                </div>
+                </ul>
             </div>
         </div>
+
     </div>
 
 

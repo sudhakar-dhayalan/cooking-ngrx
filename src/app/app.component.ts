@@ -6,10 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cooking';
-  componentToBeDisp = "Recipe";
-
-  displayComp(componentToBeDisplayed) {
-    this.componentToBeDisp = componentToBeDisplayed;
-  }
 }
