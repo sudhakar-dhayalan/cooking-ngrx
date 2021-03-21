@@ -12,6 +12,8 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { FormsModule } from '@angular/forms';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { CommonModule } from '@angular/common';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     HeaderComponent,
     RecipesComponent,
     RecipeItemComponent,
+    RecipeListComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    RecipeListComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    RecipeStartComponent,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule
   ],
