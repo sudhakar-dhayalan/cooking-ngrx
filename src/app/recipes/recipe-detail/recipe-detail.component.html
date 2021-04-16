@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <img [src]="recipe?.imagePath" alt="" class="image-responsive" width="150">
+            <img [src]="recipe?.imageUrl" alt="" class="image-responsive" width="150">
         </div>
     </div>
 
@@ -22,9 +22,9 @@
                     Manage Recipe <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a (click)="addToShoppingList()" style="cursor: pointer;">To Shopping list</a></li>
+                    <li><a (click)="addToShoppingList()" style="cursor: pointer;" (click)="addToShoppingList()">To Shopping list</a></li>
                     <li><a style="cursor: pointer;" (click)="showEditRecipe()">Edit Recipe</a></li>
-                    <li><a style="cursor: pointer;">Delete Recipe</a></li>
+                    <li><a style="cursor: pointer;" (click)="onDeleteRecipe()">Delete Recipe</a></li>
                 </ul>
             </div>
         </div>
