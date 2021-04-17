@@ -43,7 +43,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   initForm() {
     let name = '';
     let url = '';
-    let description = '';
+    let imgDescription = '';
 
     this.editMode = this.id != null;
 
@@ -51,7 +51,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
       const recipe = this.recipeService.getRecipe(this.id);
       name = recipe.name;
       url = recipe.imageUrl;
-      description = recipe.description;
+      imgDescription = recipe.description;
       if (recipe['ingredients']) {
         for (let ingredient of recipe.ingredients) {
           this.recipeIngredients.push(
@@ -70,7 +70,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     this.recipeForm = new FormGroup({
       'name': new FormControl(name, Validators.required),
       'imageUrl': new FormControl(url, Validators.required),
-      'imageDescription': new FormControl(description, Validators.required),
+      'description': new FormControl(imgDescription, Validators.required),
       'ingredients': this.recipeIngredients
     });
   }
