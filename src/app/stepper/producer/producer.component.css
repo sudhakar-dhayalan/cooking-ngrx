@@ -1,0 +1,208 @@
+/* .number-log {
+    padding: 30px 20px;
+    .round {
+        margin-bottom: 15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: #fff;
+        box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+        p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: center;
+            color: #F56E28;
+        }
+    }
+    h5 {
+        margin: 0;
+        font-family: appfont;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.14;
+        letter-spacing: normal;
+        text-align: left;
+        color: #7984ac;
+        display: contents;
+    }
+    .round-white {
+        margin-bottom: 15px;
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        background: #fff;
+        border: solid 1px #7992a7;
+        p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: center;
+            color: #7992a7;
+        }
+    }
+}
+.line {
+    border-top: 1px dotted #ccc;
+    margin: 0;
+    padding: 0;
+    margin-top:-3%;
+}
+.selectedBox{
+    box-shadow: 0 0 10px 0 rgba(245, 110, 40, 1) !important;
+}
+
+@media screen and (max-width:768px){
+    .number-log {
+        padding: 3px 2px;
+        .round {
+            width: 30px;
+            height: 30px;
+            p {
+                font-size: 14px;
+            }
+        }
+        h5 {
+            font-size: 14px;
+        }
+        .round-white {
+            width: 30px;
+            height: 30px;
+            p {
+                font-size: 14px;
+            }
+        }
+
+    }
+    .round:after {
+        content: "";
+        position: absolute;
+        left: 40px;
+        width: 80%;
+        border-top: 1px dotted #ccc;
+        z-index: -1;
+    }
+   
+   
+    .line{
+        display: none !important;
+    }
+  
+}
+@media screen and (min-width:768px){
+    .line{
+        margin-top:-44px !important;
+    }
+} */
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 0 ;
+}
+/* 
+.wrapper {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+} */
+
+.wrapper .title {
+    font-weight: 700;
+    font-size: 24px;
+    color: green;
+}
+
+.select_wrap {
+    width: 225px;
+    margin: 15px auto;
+    position: relative;
+    user-select: none;
+}
+
+.select_wrap .default_option {
+    background: white;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid green;
+
+}
+
+.select_wrap .default_option li {
+    padding: 10px 20px;
+}
+
+.select_wrap .default_option::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-color: transparent transparent #555555 #555555;
+    transform: rotate(-45deg);
+}
+
+.select_wrap .select_ul {
+    position: absolute;
+    /* top: 55px; */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+}
+
+.select_wrap .select_ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.select_wrap .select_ul li:hover {
+    background-color: #fff4dd;
+}
+
+.select_wrap .select_ul li:first-child:hover {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.select_wrap .select_ul li:last-child:hover {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.select_wrap.active .default_option {
+    border-bottom: none;
+}
+
+.select_wrap.active .select_ul { 
+    display: block;
+}
+
+.select_wrap.active .default_option::before {
+    top: 18px;
+    transform: rotate(-225deg);
+}

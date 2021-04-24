@@ -1,0 +1,71 @@
+<div class="row plan-card  border-box">
+    <div class="col-xs-12 form-background">
+        <form [formGroup]="insurerForm" (ngSubmit)="onSumbit()">
+            <!-- <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success" [disabled]="insurerForm.invalid">Save</button> &nbsp;
+                    &nbsp;
+                    <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+                </div>
+            </div> -->
+            <div class="row ">
+                <div class="col-xs-12 ">
+                    <div class="form-group ">
+                        <label for="name ">Name</label>
+                        <input type="text " placeholder="Full Name" id="name " class="form-control" formControlName="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-12 ">
+                    <div class="form-group ">
+                        <label for="dob ">Date Of Birth</label>
+                        <input type="text " placeholder="DOB" id="name " class="form-control" formControlName="dob">
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-12 ">
+                    <div class="form-group ">
+                        <div class="col-xs-12" style="padding: 0;"><label for="dob ">Gender</label></div>
+                        <div class="radio form-control radio-1 col-xs-6" style="width: 50%; display: inline;">
+                            <input class="radio-input" type="radio" value="option1" id="male" formControlName="gender">
+                            <label class="radio-label" for="male">Male</label>
+                        </div>
+                        <div class="radio form-control radio-2 col-xs-6" style="width: 50%; display: inline;">
+                            <input class="radio-input" type="radio" value="option2" id="female" formControlName="gender">
+                            <label class="radio-label" for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-12 ">
+                    <div class="form-group ">
+                        <div class="col-xs-12" style="padding: 0;"><label for="dob ">Marital Status</label></div>
+                        <div class="radio form-control radio-1 col-xs-6" style="width: 50%; display: inline;">
+                            <input class="radio-input" type="radio" value="option1" name="myRadio" id="married">
+                            <label class="radio-label" for="married">Married</label>
+                        </div>
+                        <div class="radio form-control radio-2 col-xs-6" style="width: 50%; display: inline;">
+                            <input class="radio-input" type="radio" value="option2" name="myRadio" id="bachelor">
+                            <label class="radio-label" for="bachelor">Bachelor</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-12 " style="display: inline-flex; justify-content: space-between;">
+                    <div class="col-xs-5">
+                        <label for="education">Education</label>
+                        <input type="text" name="eductaion" id="education" [value]="'education'">
+                    </div>
+                    <div class="col-xs-5">
+                        <label for="education">Profession</label>
+                        <input type="text" name="eductaion" id="profession" [value]="'profession'">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

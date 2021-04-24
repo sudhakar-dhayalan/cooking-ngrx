@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +20,12 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { RecipesService } from './recipes/recipes.service';
 import { DataStorageService } from './shared/data-storage.service';
 import { RecipeResolverService } from './recipes/recipe-resolver.service';
+import { AuthenticateComponent } from './auth/authenticate/authenticate.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { ConsumerComponent } from './stepper/consumer/consumer.component';
+import { ProducerComponent } from './stepper/producer/producer.component';
+import { AuthInterceptorService } from './auth/auth-interceptor.service';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,11 @@ import { RecipeResolverService } from './recipes/recipe-resolver.service';
     RecipeDetailComponent,
     RecipeStartComponent,
     RecipeEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    AuthenticateComponent,
+    LoadingSpinnerComponent,
+    ConsumerComponent,
+    ProducerComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +53,15 @@ import { RecipeResolverService } from './recipes/recipe-resolver.service';
     FormsModule,
     HttpClientModule 
   ],
-  providers: [ShoppingListService, RecipesService, DataStorageService, RecipeResolverService],
+  providers: [
+    ShoppingListService, 
+    RecipesService, 
+    DataStorageService, 
+    RecipeResolverService, 
+    AuthInterceptorService,
+    AuthGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

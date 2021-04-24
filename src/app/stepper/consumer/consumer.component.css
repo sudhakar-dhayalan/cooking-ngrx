@@ -1,0 +1,66 @@
+.form-background {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.plan-card {
+    /* border: solid 1px grey; */
+    box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: .5rem;
+    background-color: white;
+    margin-left: .1rem;
+    margin-right: .1rem;
+}
+
+.border-box {
+    border-radius: 10px;
+}
+
+.radio {
+    display: inline-flex;
+    overflow: hidden;
+    width: 100%;
+    /* border-radius: 15px; */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.25); */
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-label {
+    padding: 10px;
+    font-size: 14px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    bottom: 1rem;
+}
+
+.blue-text {
+    color: #7b8cc3;
+}
+
+.radio-1 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.radio-2 {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+    margin-top: 0;
+    border-left: none;
+}
+
+label {
+    margin: 0;
+}
+
+.radio-input:checked +.radio-label {
+    background-color: greenyellow;
+}
