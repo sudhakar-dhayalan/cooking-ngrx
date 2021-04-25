@@ -26,6 +26,7 @@ import { ConsumerComponent } from './stepper/consumer/consumer.component';
 import { ProducerComponent } from './stepper/producer/producer.component';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { AuthGuard } from './auth/auth.guard';
+import { AlertComponent } from './shared/alert/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AuthGuard } from './auth/auth.guard';
     AuthenticateComponent,
     LoadingSpinnerComponent,
     ConsumerComponent,
-    ProducerComponent
+    ProducerComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

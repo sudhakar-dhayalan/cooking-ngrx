@@ -62,4 +62,8 @@ export class AuthenticateComponent implements OnInit {
 
     form.reset();
   }
+
+  closeModal() {
+    this.error = null;
+  }
 }
