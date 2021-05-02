@@ -6,21 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ConsumerComponent } from './stepper/consumer/consumer.component';
-import { ProducerComponent } from './stepper/producer/producer.component';
+// import { ConsumerComponent } from './stepper/consumer/consumer.component';
+// import { ProducerComponent } from './stepper/producer/producer.component';
 import { SharedModule } from './shared/shared.module';
 import { DialogComponent } from './stepper/dialog/dialog.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatDialogModule } from '@angular/material/dialog';
+// import { MatDialogModule } from '@angular/material/dialog';
 import { CoreModule } from './core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ConsumerComponent,
-    ProducerComponent,
+    // ConsumerComponent,
+    // ProducerComponent,
     DialogComponent
   ],
   imports: [
@@ -32,7 +32,7 @@ import { CoreModule } from './core.module';
     CoreModule,
 
     BrowserAnimationsModule,
-    MatDialogModule
+    // MatDialogModule
   ],
   providers: [
     // ShoppingListService, 
