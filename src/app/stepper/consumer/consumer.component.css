@@ -1,4 +1,4 @@
-/* .form-background {
+.form-background {
     background-color: #f2f2f2;
     border-radius: 5px;
 }
@@ -58,6 +58,6 @@ label {
     margin: 0;
 }
 
-.radio-input:checked +.radio-label {
+.radio-input:checked+.radio-label {
     background-color: greenyellow;
-} */
+}
