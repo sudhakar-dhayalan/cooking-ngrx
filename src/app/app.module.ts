@@ -15,7 +15,7 @@ import { DialogComponent } from './stepper/dialog/dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatDialogModule } from '@angular/material/dialog';
 import { CoreModule } from './core.module';
-import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer';
+import * as fromAppStore from './store/app.store';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({shoppingList: shoppingListReducer}),
+    StoreModule.forRoot(fromAppStore.appReducer),
     ReactiveFormsModule,
     HttpClientModule,
     SharedModule,

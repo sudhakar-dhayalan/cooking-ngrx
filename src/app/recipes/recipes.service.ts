@@ -5,14 +5,15 @@ import { Subject } from "rxjs";
 import { Ingredient } from "../shared/ingredient.model";
 import { Recipe } from "./recipe.model";
 import * as ShoppingListActions from "./../shopping-list/store/shopping-list.store";
-import * as fromShoppingList from './../shopping-list/store/shopping-list.reducer';
+import * as fromAppStore from '../store/app.store';
+
 @Injectable()
 export class RecipesService {
 
     recipesChanged = new Subject<Recipe[]>();
 
     constructor(
-        private store: Store<fromShoppingList.AppState>
+        private store: Store<fromAppStore.AppState>
         ) {}
 
     // private recipes: Recipe[] = [
