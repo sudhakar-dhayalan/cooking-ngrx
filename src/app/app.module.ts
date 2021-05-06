@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
+import { StoreModule } from '@ngrx/store';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { DialogComponent } from './stepper/dialog/dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatDialogModule } from '@angular/material/dialog';
 import { CoreModule } from './core.module';
+import { shoppingListReducer } from './shopping-list/store/shopping-list.reducer';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { CoreModule } from './core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    StoreModule.forRoot({shoppingList: shoppingListReducer}),
     ReactiveFormsModule,
     HttpClientModule,
     SharedModule,
