@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 
 import { Ingredient } from '../shared/ingredient.model';
-import * as ShoppingListActions from "./store/shopping-list.store";
+import * as ShoppingListActions from "./store/shopping-list.actions";
 import * as fromAppStore from '../store/app.store';
 
 @Component({

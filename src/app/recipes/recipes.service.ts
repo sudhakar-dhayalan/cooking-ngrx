@@ -4,7 +4,7 @@ import { Subject } from "rxjs";
 
 import { Ingredient } from "../shared/ingredient.model";
 import { Recipe } from "./recipe.model";
-import * as ShoppingListActions from "./../shopping-list/store/shopping-list.store";
+import * as ShoppingListActions from "../shopping-list/store/shopping-list.actions";
 import * as fromAppStore from '../store/app.store';
 
 @Injectable()
