@@ -16,6 +16,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   subscription = new Subscription();
   editItem: Ingredient;
   editMode = false;
+  dynamicContentForDir = 'test content';
 
   @ViewChild('f', { static: false }) slForm: NgForm;
   constructor(private store: Store<fromAppStore.AppState>) { }
