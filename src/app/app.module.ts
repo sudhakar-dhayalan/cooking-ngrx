@@ -13,7 +13,7 @@ import { SharedModule } from './shared/shared.module';
 import { DialogComponent } from './stepper/dialog/dialog.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { CoreModule } from './core.module';
 import * as fromAppStore from './store/app.store';
 
