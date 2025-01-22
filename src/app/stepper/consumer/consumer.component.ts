@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, FormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 
@@ -10,8 +10,8 @@ import { DialogComponent } from '../dialog/dialog.component';
 })
 export class ConsumerComponent implements OnInit {
 
-  insurerForm: FormGroup;
-  constructor(private fb: FormBuilder, private dialog: MatDialog) { }
+  insurerForm: UntypedFormGroup;
+  constructor(private fb: UntypedFormBuilder, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.insurerForm = this.fb.group({
