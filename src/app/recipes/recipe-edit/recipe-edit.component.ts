@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Recipe } from '../recipe.model';
@@ -13,7 +13,7 @@ import { RecipesService } from '../recipes.service';
 export class RecipeEditComponent implements OnInit, OnDestroy {
   id;
   editMode = false;
-  recipeForm: FormGroup;
+  recipeForm: UntypedFormGroup;
 
   subscription: Subscription;
 
@@ -38,7 +38,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     }
   }
 
-  recipeIngredients = new FormArray([]);
+  recipeIngredients = new UntypedFormArray([]);
 
   initForm() {
     let name = '';
@@ -55,9 +55,9 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
       if (recipe['ingredients']) {
         for (let ingredient of recipe.ingredients) {
           this.recipeIngredients.push(
-            new FormGroup({
-              'name': new FormControl(ingredient.name, Validators.required),
-              'amount': new FormControl(ingredient.amount, [
+            new UntypedFormGroup({
+              'name': new UntypedFormControl(ingredient.name, Validators.required),
+              'amount': new UntypedFormControl(ingredient.amount, [
                 Validators.required,
                 Validators.pattern(/^[1-9]+[0-9]*$/)
               ])
@@ -67,23 +67,23 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
       }
     }
 
-    this.recipeForm = new FormGroup({
-      'name': new FormControl(name, Validators.required),
-      'imageUrl': new FormControl(url, Validators.required),
-      'description': new FormControl(imgDescription, Validators.required),
+    this.recipeForm = new UntypedFormGroup({
+      'name': new UntypedFormControl(name, Validators.required),
+      'imageUrl': new UntypedFormControl(url, Validators.required),
+      'description': new UntypedFormControl(imgDescription, Validators.required),
       'ingredients': this.recipeIngredients
     });
   }
 
   get controls() {
-    return (<FormArray>this.recipeForm.get('ingredients')).controls;
+    return (<UntypedFormArray>this.recipeForm.get('ingredients')).controls;
   }
 
   onAddIngredient() {
-    (<FormArray>this.recipeForm.get('ingredients')).push(
-      new FormGroup({
-        'name': new FormControl(null, Validators.required),
-        'amount': new FormControl(null, [
+    (<UntypedFormArray>this.recipeForm.get('ingredients')).push(
+      new UntypedFormGroup({
+        'name': new UntypedFormControl(null, Validators.required),
+        'amount': new UntypedFormControl(null, [
           Validators.required,
           Validators.pattern(/^[1-9]+[0-9]*$/)
         ])
@@ -96,6 +96,6 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   }
 
   onDeleteIngredient(index: number) {
-    (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
+    (<UntypedFormArray>this.recipeForm.get('ingredients')).removeAt(index);
   }
 }
