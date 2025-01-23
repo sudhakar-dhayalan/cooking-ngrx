@@ -2,26 +2,36 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
-## Development server
+## Concepts used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+All angular features (almost all concepts) were used in building this application.
 
-## Code scaffolding
+## About
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Contains Menubar, protected by auth guard.
 
-## Build
+1. SignUp and login page with basic form validation. Once login is successful, then only recipe page is shown (Similar to Amazon), but can view the shopping list.
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/b105549d-fbd7-43e2-a373-3960e8679339" />
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/64584f75-6b37-4f73-a3c9-6c01328b0519" />
 
-## Running unit tests
+2. Once signed up and login, will be able to see Recipe page.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/07db427b-1d00-4a78-95b1-799c33ed12e6" />
 
-## Running end-to-end tests
+Adding new recipe form where we can add ingredients and save or delete.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/11f77113-c5af-4ebd-a4e6-257aae85583b" />
 
-## Further help
+List that shows saved recipe as well:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/a50d5154-183d-4750-95a1-6e1b2c94b619" />
+
+After saving the recipe also, we can manage it by selecting it and performing the required operation:
+
+<img width="1462" alt="image" src="https://github.com/user-attachments/assets/736c4b9a-3d70-4381-8c1b-606468904061" />
+
+This uses all of the crud operations
+
+
+
